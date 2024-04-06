@@ -2,12 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-{/*import Box from './components/Box.jsx' 
-import Hover from './hover.jsx'*/}
-import Header from './components/header.jsx'
-import Grid from './components/grid.jsx'
-import Marquee from './components/marquee.jsx'
-
+import Box from './components/Box.jsx'
+import Hover from './hover.jsx'
 
 
 function App() {
@@ -15,12 +11,6 @@ function App() {
 
   return (
     <>
-    <div className=''>
-        
-        <Grid/>
-        
-        
-    {/*</div>
      <div className='items-center'>
         <Hover/>
       </div>
@@ -34,7 +24,7 @@ function App() {
         <Box/>
         <Box/>
         <Box/>
-      </div>*/}
+      </div>
     </div>
   </>
   )
