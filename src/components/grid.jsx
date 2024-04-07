@@ -3,6 +3,7 @@ import SampleImage from './dpimg.png';
 import trophy from './trophy.png';
 import heart from './heart.png';
 import coin from './coin.png';
+import Cal from './calendar';
 
 const Grid = () => {
   return (
@@ -48,7 +49,7 @@ const Grid = () => {
             </div>
           </div>
 
-          <div className='text-center' style={{ backgroundColor: 'rgba(255, 246, 163, 1)', height: '100%' }}>Konnichiwa Wordo</div>
+          <div className='text-center' style={{ backgroundColor: 'rgba(255, 246, 163, 1)', height: '100%', padding: '20px' }}><Cal /></div>
           
           <div className='text-center' style={{ backgroundColor: 'rgba(211, 199, 255, 1)', height: '100%' }}>Hallo World</div>
         </div>
