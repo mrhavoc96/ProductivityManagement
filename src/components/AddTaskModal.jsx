@@ -14,13 +14,15 @@ const AddTaskModal = ({ isOpen, onClose, onSave }) => {
     const currentDate = new Date(); // Get current date and time
     const startDateTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), startTime.split(':')[0], startTime.split(':')[1]);
     const endDateTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), endTime.split(':')[0], endTime.split(':')[1]);
-    const originalEvent = { title, start: startDateTime, end: endDateTime };
+    const oldTitle = title + "#1";
+    const originalEvent = { title:oldTitle, start: startDateTime, end: endDateTime };
 
     const adjustedStartDateTime = new Date(startDateTime);
     adjustedStartDateTime.setHours(adjustedStartDateTime.getHours() + timeSpacing * 7 * 24);
     const adjustedEndDateTime = new Date(endDateTime);
     adjustedEndDateTime.setHours(adjustedEndDateTime.getHours() + timeSpacing * 7 * 24);
-    const timeSpacingEvent = { title, start: adjustedStartDateTime, end: adjustedEndDateTime};
+    const newTitle = title + "#2";
+    const timeSpacingEvent = { title:newTitle, start: adjustedStartDateTime, end: adjustedEndDateTime};
 
     const success = onSave([originalEvent, timeSpacingEvent]);
     if (success) {
@@ -34,8 +36,6 @@ const AddTaskModal = ({ isOpen, onClose, onSave }) => {
         alert("The Task is Conflicting with existing task")
     } 
   };
-
-  const Save = () => {}
 
   return (
     <div className={`fixed top-0 left-0 w-full h-full flex items-center justify-center w-200 z-50 ${isOpen ? '' : 'hidden'}`}>
