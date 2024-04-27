@@ -53,7 +53,7 @@ const Grid = () => {
           <div className='text-center' style={{ backgroundColor: 'rgba(211, 199, 255, 1)', height: '100%' }}>Hallo World</div>
         </div>
         
-        <div style={{ backgroundColor: 'black', color: 'white', height: '50px' }}>
+        <div style={{ backgroundColor: 'black', color: 'white', height: '25px' }}>
           <marquee behavior="scroll" direction="left" loop="true">
             hello hello
           </marquee>
