@@ -49,7 +49,7 @@ const Grid = () => {
             </div>
           </div>
 
-          <div className='text-center' style={{ backgroundColor: 'rgba(255, 246, 163, 1)', height: '100%', paddingTop: '20px', paddingLeft: '10px', paddingRight: '10px'}}><Cal /></div>
+          <div className='text-center' style={{ backgroundColor: 'rgba(255, 250, 202, 1)', height: '100%', paddingTop: '20px', paddingLeft: '10px', paddingRight: '10px'}}><Cal /></div>
           
           <div className='text-center' style={{ backgroundColor: 'rgba(211, 199, 255, 1)', height: '100%' }}>Hallo World</div>
         </div>

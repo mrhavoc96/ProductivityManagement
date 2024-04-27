@@ -42,7 +42,7 @@ export default function Cal() {
       };
     
     return (
-      <div className="rounded-2xl" style={{ backgroundColor: 'rgba(248, 243, 199, 1)', padding: '15px' }}>
+      <div className="rounded-2xl border-4 border-slate-500" style={{ padding: '15px' }}>
         <Calendar
         localizer={localizer}
         events={myEvents}
