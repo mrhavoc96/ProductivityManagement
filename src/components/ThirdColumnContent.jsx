@@ -25,13 +25,23 @@ events.forEach((event, index) => {
   };
 
   const handleCheckboxToggle = (index) => {
-    // Create a copy of the events array
-  const updatedEvents = [...events];
-  const eventIndex = todayEvents[index].originalIndex;
-  // Toggle the checked property of the event at the specified index
-  updatedEvents[eventIndex] = { ...updatedEvents[eventIndex], checked: !updatedEvents[index].checked };
-  // Update the events state with the modified array
-  setEvents(updatedEvents);
+    // Create a copy of the original events array
+    const updatedEvents = [...events];
+  
+    // Get the original index of the event in the original events array
+    const eventIndex = todayEvents[index].originalIndex;
+  
+    // Toggle the checked property of the corresponding event in the original array
+    updatedEvents[eventIndex] = {
+      ...updatedEvents[eventIndex],
+      checked: !updatedEvents[eventIndex].checked
+    };
+  
+    // Update state with the modified events array
+    setEvents(updatedEvents);
+  
+    // You can then perform any further operations you need with this updated array
+    // For example, you can call an API to update the backend database
   };
 
   return (
