@@ -3,7 +3,6 @@ import SampleImage from './dpimg.png';
 import trophy from './trophy.png';
 import heart from './heart.png';
 import coin from './coin.png';
-import Cal from './calendar';
 
 const Grid = () => {
   return (
