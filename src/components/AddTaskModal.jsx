@@ -15,14 +15,14 @@ const AddTaskModal = ({ isOpen, onClose, onSave }) => {
     const startDateTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), startTime.split(':')[0], startTime.split(':')[1]);
     const endDateTime = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), endTime.split(':')[0], endTime.split(':')[1]);
     const oldTitle = title + "#1";
-    const originalEvent = { title:oldTitle, start: startDateTime, end: endDateTime };
+    const originalEvent = { title:oldTitle, start: startDateTime, end: endDateTime, checked: false };
 
     const adjustedStartDateTime = new Date(startDateTime);
     adjustedStartDateTime.setHours(adjustedStartDateTime.getHours() + timeSpacing * 7 * 24);
     const adjustedEndDateTime = new Date(endDateTime);
     adjustedEndDateTime.setHours(adjustedEndDateTime.getHours() + timeSpacing * 7 * 24);
     const newTitle = title + "#2";
-    const timeSpacingEvent = { title:newTitle, start: adjustedStartDateTime, end: adjustedEndDateTime};
+    const timeSpacingEvent = { title:newTitle, start: adjustedStartDateTime, end: adjustedEndDateTime, checked: false};
 
     const success = onSave([originalEvent, timeSpacingEvent]);
     if (success) {

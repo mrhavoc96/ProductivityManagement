@@ -41,7 +41,7 @@ const PomodoroCounter = ({setPomodoroState}) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-75">
+    <div className="z-50 fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-75">
       <div className="relative bg-white p-8 rounded-lg w-3/4 h-3/4">
         <button className="absolute top-0 right-0 p-2" onClick={closeWindow}>
           <svg className="h-6 w-6 text-gray-600 hover:text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">

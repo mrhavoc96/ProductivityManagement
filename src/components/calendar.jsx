@@ -5,10 +5,8 @@ import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 
 const localizer = momentLocalizer(moment);
-export default function Cal() {
-  const [myEvents, setMyEvents] = useState([]);
+export default function Cal({ myEvents,setMyEvents }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [lastClickTime, setLastClickTime] = useState(null);
     
     const handleSelectEvent = (event) => {
         console.log('Selected event:', event);

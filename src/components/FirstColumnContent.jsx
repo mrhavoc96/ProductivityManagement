@@ -4,7 +4,10 @@ import heart from './heart.png';
 import trophy from './trophy.png';
 import coin from './coin.png';
 
-const FirstColumnContent = () => {
+const FirstColumnContent = ({events}) => {
+  const checkedCount = events.filter(event => event.checked).length;
+  const totalCount = events.length;
+
   return (
     <div style={{ backgroundColor: 'rgba(242, 217, 87, 1)', height: '100%' }}>
       <p className='ml-0 px-4 mt-2 font-mono font-bold' style={{ fontSize: '1.6rem' }}>Statistics.</p>
@@ -32,6 +35,7 @@ const FirstColumnContent = () => {
           <img src={coin} alt='trophy image' className='w-8 h-8  object-cover mt-2' />
         </div>
         <div className="border-t border-gray-500 w-4.5/5 h-8"></div>
+          <p> {checkedCount} / {totalCount} </p>
         <div className="border-t border-gray-500 w-4.5/5 h-8"></div>
       </div>
     </div>
