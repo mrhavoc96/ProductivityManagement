@@ -6,7 +6,7 @@ import './App.css'
 import Hover from './hover.jsx'*/}
 import Header from './components/header.jsx'
 import Grid from './components/grid.jsx'
-import Marquee from './components/marquee.jsx'
+
 
 
 
