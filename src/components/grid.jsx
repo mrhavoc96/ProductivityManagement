@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FirstColumnContent from './FirstColumnContent';
 import ThirdColumnContent from './ThirdColumnContent';
-import Cal from './calendar';
+import Calendar from './calendar';
 
 const Grid = () => {
   const [myEvents, setMyEvents] = useState([]);
@@ -21,7 +21,9 @@ const Grid = () => {
 
           {/*Column Two*/}
           <div  style={{ backgroundColor: 'rgba(255, 246, 163, 1)', height: '100%' }}>
-          <div className='text-center' style={{ backgroundColor: 'rgba(255, 250, 202, 1)', height: '100%', paddingTop: '20px', paddingLeft: '10px', paddingRight: '10px'}}><Cal myEvents={myEvents} setMyEvents={setMyEvents}/></div>
+            
+            <p className='ml-0 px-4 mt-2 font-mono font-bold' style={{fontSize: '1.6rem' }}>Calendar.</p>
+            <Calendar />
           </div>
 
           {/* Column Third */}

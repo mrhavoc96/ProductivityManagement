@@ -3,7 +3,7 @@ import DigitalClock from './DigitalClock.jsx';
 import DateDisplay from './DateDisplay.jsx';
 import PomodoroCounter from './PomodoroCounter.jsx';
 
-const ThirdColumnContent = ({events, setEvents}) => {
+const ThirdColumnContent = () => {
   const [showPomodoroCounter, setShowPomodoroCounter] = useState(false);
 
   const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
