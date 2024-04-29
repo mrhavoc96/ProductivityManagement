@@ -44,8 +44,10 @@ export default function Cal({ myEvents,setMyEvents }) {
         <Calendar
         localizer={localizer}
         events={myEvents}
+        views={['month','week']}
         startAccessor="start"
         endAccessor="end"
+        toolbar={true}
         selectable = {true}
         style={{ height: 500 }}
         onSelectEvent={handleSelectEvent}

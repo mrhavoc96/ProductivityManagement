@@ -59,11 +59,10 @@ events.forEach((event, index) => {
       <hr style={{ width: 'calc(100% - 20px)', margin: '0 auto', borderTop: '4px solid rgba(169,169,169,0.6)' }}></hr>
 
       <div>
-        <p className='ml-0 px-4 mt-1 font-mono font-bold' style={{ fontSize: '1.6rem' }}>Tasks.</p>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={togglePomodoroCounter}>Start Pomodoro</button>
-        {showPomodoroCounter && <PomodoroCounter setPomodoroState={setShowPomodoroCounter} />}
+      <p className='ml-0 px-4 mt-1 font-mono font-bold' style={{ fontSize: '1.6rem' }}>Tasks.</p>
       </div>
-      <div>
+
+      <div className={` w-auto mr-2 ml-2 mt-2 rounded-2xl relative mb-2 ${todayEvents.length ? '' : 'hidden'}`} style={{ backgroundColor: 'rgba(233, 226,255, 1)', padding: '8px' }}>
         <ul>
           {todayEvents.length > 0 && todayEvents.map((event, index) => (
             <li key={index}>
@@ -77,6 +76,12 @@ events.forEach((event, index) => {
           ))}
         </ul>
       </div>
+
+      <div className=' mb-6 ' style={{textAlign: 'center'}}>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={togglePomodoroCounter}>Start Pomodoro</button>
+        {showPomodoroCounter && <PomodoroCounter setPomodoroState={setShowPomodoroCounter} />}
+      </div>
+
     </div>
   );
 };
